@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WeatherTest</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="weather-block">
+      <div class="info-block">
+        <h1 style="margin-right: 5px">Right now in</h1>
+        <input id="form" class="weather-input" type="text" />
+        <h1 id="today_desc">, it's mostly sunny.</h1>
+      </div>
+      <div class="today-weather-block">
+        <img
+          id="today_icon"
+          class="today-icon"
+          src="./icons/not_found.svg"
+          alt="#"
+        />
+        <div class="today-temp">
+          <h1 id="today_temp">10</h1>
+          <p id="today_temp_day">10°/20°</p>
+        </div>
+        <div class="today-weather-info">
+          <div class="today-wind">
+            <img src="./icons/wind.svg" alt="#" />
+            <h3 id="today_wind">8</h3>
+            <p>m/s</p>
+          </div>
+          <div class="today-humidity">
+            <img src="./icons/humidity.svg" alt="#" />
+            <h3 id="today_humidity">0</h3>
+            <p>%</p>
+          </div>
+        </div>
+      </div>
+      <div class="days-weather-block">
+        <div class="weather-card">
+          <img id="tmw_icon" src="./icons/day_clear.svg" alt="#" />
+          <h3 id="tmw_temp">-10°/20°</h3>
+          <h4 id="tmw_day">MON</h4>
+        </div>
+        <div class="weather-card">
+          <img id="af_tmw_icon" src="./icons/day_clear.svg" alt="#" />
+          <h3 id="af_tmw_temp">-10°/20°</h3>
+          <h4 id="af_tmw_day">MON</h4>
+        </div>
+        <div class="weather-card">
+          <img id="af_af_tmw_icon" src="./icons/day_clear.svg" alt="#" />
+          <h3 id="af_af_tmw_temp">-10°/20°</h3>
+          <h4 id="af_af_tmw_day">MON</h4>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="./js/index.js"></script>
+  </body>
+</html>

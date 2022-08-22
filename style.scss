@@ -1,0 +1,115 @@
+@import "./cards";
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.weather-block {
+  padding-top: 100px;
+  padding: 0;
+  margin: 100px auto auto;
+  width: 800px;
+  border-radius: 10px;
+  // background-color: aquamarine;
+}
+
+.weather-input {
+  min-width: 40px;
+  max-width: 40px;
+  height: 30px;
+  padding: 0;
+  margin: 0;
+
+  border-radius: 5px;
+  background: none;
+  transition: 0.15s;
+
+  text-align: center;
+  outline: none;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.1);
+
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-decoration-color: rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 10px -1px rgba(34, 60, 80, 0.2);
+
+  font-size: 1.5em;
+
+  ::placeholder {
+    text-align: center;
+  }
+}
+
+h1 {
+  padding: 0;
+  font-family: sans-serif;
+  font-size: 1.5em;
+}
+
+.info-block {
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.today-weather-block {
+  padding-top: 100px;
+  display: flex;
+  text-align: center;
+  height: 200px;
+  align-items: center;
+}
+
+.today-icon {
+  height: 200px;
+  width: 200px;
+}
+
+.today-temp {
+  margin: auto;
+  h1 {
+    margin: 0;
+    font-size: 6em;
+  }
+  p {
+    margin: 0;
+    font-size: 1.3em;
+    font-weight: bold;
+  }
+}
+
+.today-weather-info {
+  padding: 0 50px;
+  img {
+    width: 35px;
+    height: 35px;
+    margin-right: 20px;
+  }
+  h3 {
+    font-size: 1.5em;
+  }
+  p {
+    margin-left: 5px;
+    font-size: 1.3em;
+    font-weight: bold;
+  }
+}
+
+.today-wind {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+.today-humidity {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
