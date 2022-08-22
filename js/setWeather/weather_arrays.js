@@ -7,7 +7,7 @@ export let af_tmw_week_day
 export let af_af_tmw_week_day
 
 export function getWeatherArrays(weather_array) {
-  let date_current = new Date(weather_array.list[0].dt * 1000)
+  let date_current = new Date()
   let day_current = date_current.getUTCDate()
 
   date_current.setDate(date_current.getDate() + 1)

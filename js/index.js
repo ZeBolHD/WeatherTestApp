@@ -13,12 +13,27 @@ form.addEventListener("keydown", () => {
   }
 })
 
+let error_block = document.getElementById("error_block")
+let error_message = document.getElementById("error_message")
+
+const error_naw = () => {
+  error_block.className += " error-show"
+  error_message.innerHTML = `Ошибка: введите название города.`
+  setTimeout(() => (error_block.className = "error-block"), 2000)
+}
+
 form.addEventListener(
   "change",
   () =>
-    form.value != 0 &&
-    !form.value.match(/[0-9]/g) &&
-    getWeather(form.value).catch((err) => console.log(err))
+    (form.value != 0 &&
+      !form.value.match(/[0-9]/g) &&
+      getWeather(form.value).catch((err) => {
+        console.log(`Ошибка: ${err}.`)
+        error_block.className += " error-show"
+        error_message.innerHTML = `Ошибка: такого города не существует.`
+        setTimeout(() => (error_block.className = "error-block"), 2000)
+      })) ||
+    error_naw()
 )
 
 async function getWeather(city_name) {
