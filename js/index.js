@@ -6,6 +6,7 @@ import { setWeatherAfAfTmw } from "./setWeather/af_af_tmw_weather.js"
 
 let form = document.getElementById("form")
 form.addEventListener("keydown", () => {
+  form.value = form.value.trim()
   if ((form.value.length + 7) * 9 > 40) {
     form.style.maxWidth = (form.value.length * 1.5 + 5) * 10 + "px"
   } else {
@@ -26,7 +27,7 @@ form.addEventListener(
   "change",
   () =>
     (form.value != 0 &&
-      !form.value.match(/[0-9]/g) &&
+      (form.value.match(/[a-z]/g) || form.value.match(/[а-я]/g)) &&
       getWeather(form.value).catch((err) => {
         console.log(`Ошибка: ${err}.`)
         error_block.className += " error-show"
